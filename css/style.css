@@ -466,3 +466,14 @@ body {
         font-size: 16px;
     }
 }
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+.titulo-destaque {
+    font-family: 'Merriweather', serif; /* Fonte serifada e acolhedora */
+    font-size: 2rem; /* Ajuste o tamanho conforme necessário */
+    font-weight: 700; /* Peso para deixar o texto negrito */
+    color: #a85854; /* Cor da paleta */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); /* Sombreado mais forte */
+    line-height: 1.4;
+}
+
