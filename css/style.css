@@ -157,20 +157,24 @@ body {
         flex-direction: column; /* Empilha os cards verticalmente */
         align-items: center;
     }
-  
+
     .card {
         max-width: 100%; /* Permite que os cards ocupem toda a largura em telas menores */
         margin-bottom: 20px; /* Espaçamento entre os cards */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-  
+
     .card__content {
-        position: relative;
-        top: auto;
-        left: auto;
+        position: static; /* Remove posicionamento absoluto */
         transform: none;
         opacity: 1;
+        text-align: center; /* Centraliza o texto */
+        margin-top: 10px; /* Espaço entre a imagem e o texto */
     }
-  }
+}
+
   
   @media (max-width: 480px) {
     .card__title {
