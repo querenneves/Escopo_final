@@ -1,0 +1,535 @@
+body {
+  font-family: "Merriweather", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", 
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; 
+font-size: 1.2em; /* Aumenta o tamanho da fonte */
+text-align: justify; /* Justifica todo o texto */
+line-height: 1.8; /* Aumenta o espaçamento entre as linhas */
+word-spacing: 0.1em; /* Dá um pequeno respiro entre as palavras */
+padding: 0 15px;
+    background-color:  #ffffff;
+    height: 200vh;
+    position: relative; }
+    body:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      -webkit-transition: .3s all ease;
+      -o-transition: .3s all ease;
+      transition: .3s all ease;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1; }
+    body.offcanvas-menu:before {
+      opacity: 1;
+      z-index: 1002;
+      visibility: visible; }
+      .site-menu-toggle {
+        font-size: 7px; 
+        background-color: #333; 
+        color: #fff; 
+        padding: 7px 15px; 
+        border-radius: 5px; 
+        border: 2px solid #000; 
+        display: inline-block; 
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s; 
+      }
+      
+      @media (max-width: 768px) {
+        body {
+            font-size: 1.4em; /* Aumenta a fonte no mobile para melhor leitura */
+            line-height: 2; /* Mais espaçamento entre linhas */
+        }
+    }
+  p {
+    color: #000000;
+    font-weight: 300; }
+  
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+  
+  a {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease; }
+    a, a:hover {
+      text-decoration: none !important; }
+  
+  .hero {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; }
+  
+  /* Logo */
+  .site-logo img {
+    max-width: 70px;
+  }
+  
+  /* Barra de navegação */
+  .site-navbar {
+    background: transparent; 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .servicos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Título da seção */
+.servicos-title {
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #4A4A4A;
+    margin-bottom: 30px;
+}
+
+/* Estilos dos cards */
+.card {
+    font-family: Arial, sans-serif;
+    position: relative;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    min-height: 400px;
+    max-width: 350px;
+    height: 100%; 
+    align-items: stretch;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+/* Efeito de hover */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Sobreposição para melhorar a legibilidade */
+.card::before {
+  background: rgba(0, 0, 0, 0.2); 
+}
+
+/* Ajuste do conteúdo dentro dos cards */
+.card-content {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Título do card */
+.title {
+    font-size: px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Texto do card */
+.ptexto {
+  text-align: left;
+    line-height: 1.1;
+    font-size: 16px;
+}
+
+/* Imagens de fundo */
+.card.psicoterapia {
+    background: url("../img/psicologia.jpeg") center/cover no-repeat;
+}
+
+.card.terapia {
+    background: url("../img/terapia_casal.jpeg") center/cover no-repeat;
+}
+
+.card.ansiedade {
+    background: url("../img/ansiedade.jpg") center/cover no-repeat;
+}
+.card.depressao {
+  background: url("../img/depressao.png") center/cover no-repeat;
+}
+.card.autoestima {
+  background: url("../img/autoestima.png") center/cover no-repeat;
+}
+.card.mentoria {
+  background: url("../img/mentoria.png") center/cover no-repeat;
+}
+.card.constelacao {
+  background: url("../img/constelacao.png") center/cover no-repeat;
+}
+.card.palestras {
+  background: url("../img/palestras.png") center/cover no-repeat;
+}
+/* Para telas pequenas (até 767px) - Cards ocupam 100% da largura */
+@media (max-width: 767px) {
+  .card {
+      width: 100%; /* Ocupa a largura total */
+      margin: 10px 0; /* Espaçamento entre os cards */
+  }
+
+  .title {
+      font-size: 18px;
+  }
+
+  .ptexto {
+      font-size: 14px;
+  }
+}
+
+/* Para tablets (768px até 1023px) - Cards em 2 colunas */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .card {
+      width: calc(50% - 10px); /* Duas colunas */
+  }
+}
+
+/* Para telas grandes (1024px ou mais) - Cards em 3 colunas */
+@media (min-width: 1024px) {
+  .card {
+      width: calc(33.33% - 10px); /* Três colunas */
+  }
+}
+
+
+  .video_sobre iframe {
+    width: 100%;
+    height: auto;
+    max-width: 560px; /* Define um tamanho máximo */
+    aspect-ratio: 16 / 9; /* Mantém a proporção do player */
+    border: none; /* Remove bordas extras */
+  }
+  
+  .thought-bubble {
+    position: relative;
+    width: 250px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .bubble {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(124, 112, 112, 0.7); /* Cor de fundo */
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  .bubble:nth-child(1) {
+    top: 100%;
+    left: 25%;
+    animation: float 3s infinite ease-in-out;
+  }
+  
+  .bubble:nth-child(2) {
+    top: 110%;
+    left: 50%;
+    animation: float 3s infinite ease-in-out 0.5s;
+  }
+  
+  .bubble:nth-child(3) {
+    top: 120%;
+    left: 75%;
+    animation: float 3s infinite ease-in-out 1s;
+  }
+  
+  .main-bubble {
+    width: 150px;
+    height: 100px;
+    background-color: rgba(124, 112, 112, 0.7);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  /* Animação para as bolhas menores */
+  @keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+  }
+  /* pq terapia */ 
+  .cards {
+    display: flex;
+    justify-content: space-around; /* Distribui os cards de forma uniforme */
+    flex-wrap: wrap; /* Permite que os cards quebrem linha se necessário */
+    gap: 20px; /* Espaço entre os cards */
+    padding: 20px; /* Adiciona espaçamento ao redor do grupo de cards */
+    margin: 0 40px; /* Adiciona margem nas laterais para evitar que fique colado na borda da tela */
+  }
+  
+  .cards .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 150px; /* Mantém a altura */
+    width: 250px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 400ms;
+    flex-basis: 30%; /* Os cards ocupam até 30% do espaço, ajustando a responsividade */
+  }
+  
+  
+  .cards .red {
+    background-color: #f43f5e;
+  }
+  
+  .cards .blue {
+    background-color: #3b82f6;
+  }
+  
+  .cards .green {
+    background-color: #22c55e;
+  }
+  
+  .cards .card p.tip {
+    font-size: 1em;
+    font-weight: 700;
+  }
+  
+  .cards .card p.second-text {
+    font-size: 1.3em; /* Fonte maior para desktop */
+    text-align: justify; /* Justifica o texto */
+    line-height: 1.8; /* Mais espaçamento entre linhas */
+    word-spacing: 0.1em; /* Espaçamento entre palavras para melhorar a leitura */
+    margin: 10px 0; /* Dá um respiro no topo e embaixo do parágrafo */
+    white-space: pre-line;
+}
+
+@media (max-width: 768px) {
+    .cards .card p.second-text {
+        font-size: 1.4em; /* Aumenta ainda mais no mobile */
+        text-align: justify; /* Mantém justificado */
+        line-height: 2; /* Torna o texto mais arejado */
+        word-spacing: 0.15em; /* Melhora a leitura no mobile */
+        padding: 0 10px; /* Adiciona um pouco de espaço nas laterais */
+    }
+}
+
+
+  
+  .cards .card:hover {
+    transform: scale(1.1, 1.1);
+  }
+  
+  .cards:hover > .card:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+  }
+  .contratar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(-45deg, #e0d1ed 0%, #f0b9cf 50%, #f0b9cf 100%);
+    border-radius: 10px;
+  }
+  .sub-c {
+    flex: 1;
+    min-width: 260px;
+    max-width: 300px;
+    background: #ffffff57;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sub-c:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tip {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .second-text {
+    font-size: 14px;
+    color: #000;
+    line-height: 1.4;
+  }
+  
+  @media (max-width: 768px) {
+    .contratar {
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+  .master_sobre {
+    width: 100%;
+    padding: 0 15px;
+  }
+  /* Responsividade para mobile */
+  @media (max-width: 768px) {
+    .image_infop img {
+        max-width: 350px; /* Aumenta um pouco no mobile */
+    }
+  }
+
+.avaliacoes-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.avaliacoes {
+    width: 300px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    display: inline-block;
+}
+
+.avaliacoes:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.rating i {
+    color: gold;
+    font-size: 20px;
+    margin: 0 2px;
+}
+
+.review-text {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.profile .google-logo {
+    position: absolute;
+    top: 100%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+}
+
+.name {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .avaliacoes {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .avaliacoes {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .profile img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile .google-logo {
+        width: 15px;
+        height: 15px;
+    }
+
+    .rating i {
+        font-size: 18px;
+    }
+
+    .review-text,
+    .name {
+        font-size: 16px;
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+.titulo-destaque {
+    font-family: 'Merriweather', serif; /* Fonte serifada e acolhedora */
+    font-size: 2rem; /* Ajuste o tamanho conforme necessário */
+    font-weight: 700; /* Peso para deixar o texto negrito */
+    color: #a85854; /* Cor da paleta */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); /* Sombreado mais forte */
+    line-height: 1.1;
+}
+
+li {
+  line-height: 1.1; /* Aumenta o espaço entre as linhas de cada item */
+}
+.texto-com-espaco {
+  line-height: 1.1; 
+}
