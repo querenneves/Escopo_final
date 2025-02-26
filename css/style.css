@@ -1,5 +1,12 @@
 body {
-    font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Merriweather", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", 
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; 
+font-size: 1.2em; /* Aumenta o tamanho da fonte */
+text-align: justify; /* Justifica todo o texto */
+line-height: 1.8; /* Aumenta o espaçamento entre as linhas */
+word-spacing: 0.1em; /* Dá um pequeno respiro entre as palavras */
+padding: 0 15px;
     background-color:  #ffffff;
     height: 200vh;
     position: relative; }
@@ -33,6 +40,12 @@ body {
         transition: background-color 0.3s, color 0.3s; 
       }
       
+      @media (max-width: 768px) {
+        body {
+            font-size: 1.4em; /* Aumenta a fonte no mobile para melhor leitura */
+            line-height: 2; /* Mais espaçamento entre linhas */
+        }
+    }
   p {
     color: #000000;
     font-weight: 300; }
@@ -73,118 +86,134 @@ body {
   
   .servicos {
     display: flex;
-    flex-wrap: wrap; /* Permite que os cards se ajustem em várias linhas se necessário */
-    justify-content: space-between;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .card {
-    flex: 1;
-    min-width: 260px; /* Define um valor mínimo para que os cards não fiquem muito pequenos */
-    max-width: 300px;
-    position: relative;
-    height: auto; /* Permite que a altura se ajuste com o conteúdo */
-    background: linear-gradient(-45deg, #007aff 0%, #e0d1ed 50%, #e0d1ed 100%);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    overflow: hidden;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  
-  .card img {
-    width: 100%; /* Assegura que a imagem ocupe toda a largura do card */
-    height: auto; /* Mantém a proporção da imagem */
-    object-fit: cover; /* Assegura que a imagem cubra todo o espaço disponível */
-  }
-  
-  .card svg {
-    width: 48px;
-    fill: #333;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  
-  .card:hover {
-    transform: rotate(-5deg) scale(1.1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card__content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: auto;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #ffffff57;
-    opacity: 0;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-    overflow-y: auto;
-  }
-  
-  .card:hover .card__content {
-    transform: translate(-50%, -50%) rotate(0deg);
-    opacity: 1;
-  }
-  
-  .card__title {
-    margin: 0;
-    font-size: 24px;
-    color: #333;
-    font-weight: 700;
-  }
-  
-  .card__description {
-    margin: 10px 0 0;
-    font-size: 14px;
-    color: #000000;
-    line-height: 1.4;
-    font-weight: bold;
-  }
-  
-  .card:hover svg {
-    scale: 0;
-    transform: rotate(-45deg);
-  }
-  
-  /* Ajustes para telas menores */
-  @media (max-width: 768px) {
-    .servicos {
-        flex-direction: column; /* Empilha os cards verticalmente */
-        align-items: center;
-    }
-
-    .card {
-        max-width: 100%; /* Permite que os cards ocupem toda a largura em telas menores */
-        margin-bottom: 20px; /* Espaçamento entre os cards */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card__content {
-        position: static; /* Remove posicionamento absoluto */
-        transform: none;
-        opacity: 1;
-        text-align: center; /* Centraliza o texto */
-        margin-top: 10px; /* Espaço entre a imagem e o texto */
-    }
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
-  
-  @media (max-width: 480px) {
-    .card__title {
-        font-size: 18px;
-    }
-  
-    .card__description {
-        font-size: 12px;
-    }
+/* Título da seção */
+.servicos-title {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #4A4A4A;
+    margin-bottom: 30px;
+}
+
+/* Estilos dos cards */
+.card {
+    font-family: Arial, sans-serif;
+    position: relative;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    min-height: 400px;
+    max-width: 350px;
+    height: 100%; 
+    align-items: stretch;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+/* Efeito de hover */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Sobreposição para melhorar a legibilidade */
+.card::before {
+  background: rgba(0, 0, 0, 0.2); 
+}
+
+/* Ajuste do conteúdo dentro dos cards */
+.card-content {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Título do card */
+.title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Texto do card */
+.ptexto {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Imagens de fundo */
+.card.psicoterapia {
+    background: url("../img/psicologia.jpeg") center/cover no-repeat;
+}
+
+.card.terapia {
+    background: url("../img/terapia_casal.jpeg") center/cover no-repeat;
+}
+
+.card.ansiedade {
+    background: url("../img/ansiedade.jpg") center/cover no-repeat;
+}
+.card.depressao {
+  background: url("../img/depressao.png") center/cover no-repeat;
+}
+.card.autoestima {
+  background: url("../img/autoestima.png") center/cover no-repeat;
+}
+.card.mentoria {
+  background: url("../img/mentoria.png") center/cover no-repeat;
+}
+.card.constelacao {
+  background: url("../img/constelacao.png") center/cover no-repeat;
+}
+.card.palestras {
+  background: url("../img/palestras.png") center/cover no-repeat;
+}
+/* Para telas pequenas (até 767px) - Cards ocupam 100% da largura */
+@media (max-width: 767px) {
+  .card {
+      width: 100%; /* Ocupa a largura total */
+      margin: 10px 0; /* Espaçamento entre os cards */
   }
+
+  .title {
+      font-size: 18px;
+  }
+
+  .ptexto {
+      font-size: 14px;
+  }
+}
+
+/* Para tablets (768px até 1023px) - Cards em 2 colunas */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .card {
+      width: calc(50% - 10px); /* Duas colunas */
+  }
+}
+
+/* Para telas grandes (1024px ou mais) - Cards em 3 colunas */
+@media (min-width: 1024px) {
+  .card {
+      width: calc(33.33% - 10px); /* Três colunas */
+  }
+}
+
+
   .video_sobre iframe {
     width: 100%;
     height: auto;
@@ -300,8 +329,25 @@ body {
   }
   
   .cards .card p.second-text {
-    font-size: 0.9em;
-  }
+    font-size: 1.3em; /* Fonte maior para desktop */
+    text-align: justify; /* Justifica o texto */
+    line-height: 1.8; /* Mais espaçamento entre linhas */
+    word-spacing: 0.1em; /* Espaçamento entre palavras para melhorar a leitura */
+    margin: 10px 0; /* Dá um respiro no topo e embaixo do parágrafo */
+    white-space: pre-line;
+}
+
+@media (max-width: 768px) {
+    .cards .card p.second-text {
+        font-size: 1.4em; /* Aumenta ainda mais no mobile */
+        text-align: justify; /* Mantém justificado */
+        line-height: 2; /* Torna o texto mais arejado */
+        word-spacing: 0.15em; /* Melhora a leitura no mobile */
+        padding: 0 10px; /* Adiciona um pouco de espaço nas laterais */
+    }
+}
+
+
   
   .cards .card:hover {
     transform: scale(1.1, 1.1);

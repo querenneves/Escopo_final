@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards Psicoterapia</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Estilização da seção de serviços */
+.servicos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Título da seção */
+.servicos-title {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #4A4A4A;
+    margin-bottom: 30px;
+}
+
+/* Estilos dos cards */
+.card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    height: 400px; 
+    align-items: stretch;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+/* Efeito de hover */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Sobreposição para melhorar a legibilidade */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    opacity: 0.6;
+}
+
+/* Ajuste do conteúdo dentro dos cards */
+.card-content {
+    position: relative;
+    z-index: 1;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+}
+
+/* Título do card */
+.title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Texto do card */
+.ptexto {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Imagens de fundo */
+.card.psicoterapia {
+    background: url("./img/psicologia.jpeg") center/cover no-repeat;
+}
+
+.card.terapia {
+    background: url("./img/terapia_casal.jpeg") center/cover no-repeat;
+}
+
+.card.ansiedade {
+    background: url("./img/ansiedade.jpg") center/cover no-repeat;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .card {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .ptexto {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .card {
+        width: calc(33.33% - 20px);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <section class="servicos">
+        <h2 class="servicos-title">Nossos Serviços</h2>
+        <div class="card psicoterapia">
+            <div class="card-content">
+                <h3 class="title">Psicoterapia Adulto</h3>
+                <p class="ptexto">
+                    A psicoterapia é um convite para você cuidar de si mesmo, explorar
+                    seus sentimentos, superar desafios e construir uma vida mais equilibrada e plena.
+                    Investir em sua saúde mental é um ato de amor próprio que transforma sua relação
+                    com você mesmo e com o mundo ao seu redor.
+                </p>
+            </div>
+        </div>
+    
+        <div class="card terapia">
+            <div class="card-content">
+                <h3 class="title">Terapia de Casal</h3>
+                <p class="ptexto">
+                    A terapia de casal ajuda parceiros a fortalecerem o vínculo, melhorarem a comunicação
+                    e resolverem conflitos, criando uma relação mais harmoniosa e saudável.
+                </p>
+            </div>
+        </div>
+    
+        <div class="card ansiedade">
+            <div class="card-content">
+                <h3 class="title">Ansiedade e Pânico</h3>
+                <p class="ptexto">
+                    Tratamento especializado para lidar com crises de ansiedade e pânico, proporcionando
+                    técnicas para controle emocional e bem-estar mental.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
