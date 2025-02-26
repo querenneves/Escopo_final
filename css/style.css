@@ -6,9 +6,10 @@ font-size: 1.2em; /* Aumenta o tamanho da fonte */
 text-align: justify; /* Justifica todo o texto */
 line-height: 1.8; /* Aumenta o espaçamento entre as linhas */
 word-spacing: 0.1em; /* Dá um pequeno respiro entre as palavras */
-padding: 0 15px;
+padding: 0;
     background-color:  #ffffff;
-    height: 200vh;
+    height: 100%;
+    overflow-x: hidden;
     position: relative; }
     body:before {
       content: "";
@@ -32,7 +33,7 @@ padding: 0 15px;
         font-size: 7px; 
         background-color: #333; 
         color: #fff; 
-        padding: 7px 15px; 
+        padding: 0; 
         border-radius: 5px; 
         border: 2px solid #000; 
         display: inline-block; 
