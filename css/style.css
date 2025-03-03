@@ -413,10 +413,12 @@ padding: 0;
   }
 
 .avaliacoes-wrapper {
+    height: 800px;
     min-height: 250px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 90%;
     gap: 20px;
 }
 
@@ -428,6 +430,8 @@ padding: 0;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: #fff;
+    justify-content: space-between; 
+    height: 100%;
     display: inline-block;
 }
 
@@ -450,6 +454,10 @@ padding: 0;
 }
 
 .review-text {
+    height: 150px;
+    min-height: 120px;
+    max-height: 150px;
+    overflow-y: auto;
     text-align: center;
     margin-bottom: 15px;
 }
@@ -535,7 +543,4 @@ li {
 .texto-com-espaco {
   line-height: 1.1; 
 }
-.carousel-inner {
-  max-height: 300px; /* Ajuste conforme necessário */
-  overflow: hidden;
-}
+
