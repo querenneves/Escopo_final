@@ -413,9 +413,10 @@ padding: 0;
   }
 
 .avaliacoes-wrapper {
+    min-height: 250px; 
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -533,4 +534,8 @@ li {
 }
 .texto-com-espaco {
   line-height: 1.1; 
+}
+.carousel-inner {
+  max-height: 300px; /* Ajuste conforme necessário */
+  overflow: hidden;
 }
