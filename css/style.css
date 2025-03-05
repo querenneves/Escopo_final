@@ -153,7 +153,7 @@ padding: 0;
 /* Texto do card */
 .ptexto {
   text-align: left;
-    line-height: 1.1;
+    line-height: 1.7;
     font-size: 16px;
 }
 
@@ -543,4 +543,3 @@ li {
 .texto-com-espaco {
   line-height: 1.1; 
 }
-
